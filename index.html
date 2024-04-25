@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="decorative-circle"></div>
+      <div class="left-section">
+        <h2>About this App</h2>
+        <p>This Temperature Converter is a simple tool to convert temperature values from Celsius to Fahrenheit. It's useful for quick and easy temperature conversions in everyday life and various applications.</p>
+        <a href="https://www.instagram.com/feemoai/" target="_blank" class="instagram-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+      <div class="right-section">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="celsius" placeholder="Enter temperature in Celsius" />
+        <br />
+        <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <p id="fahrenheit" class="result"></p>
+      </div>
+    </div>
+
+    <script>
+      function convertToFahrenheit() {
+        var celsius = document.getElementById("celsius").value;
+        var fahrenheit = (celsius * 9) / 5 + 32;
+        var resultElement = document.getElementById("fahrenheit");
+        resultElement.innerText = "Fahrenheit: " + fahrenheit.toFixed(2);
+        resultElement.classList.add("result");
+      }
+    </script>
+  </body>
+</html>

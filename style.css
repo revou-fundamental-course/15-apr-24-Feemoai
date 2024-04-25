@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6e8eb;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left-section {
+  flex: 1;
+  text-align: left;
+  margin-right: 30px;
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.right-section {
+  flex: 1;
+  text-align: center;
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="number"] {
+  width: calc(100% - 40px);
+  padding: 15px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  background-color: #f8f9fa;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="number"]:focus {
+  border-color: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #333;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.decorative-line {
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  margin: 30px 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.left-section h2 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.left-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.decorative-circle {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  animation: rotateCircle 4s linear infinite;
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.result {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.instagram-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  animation: fadeInUp 1s ease-out forwards;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.instagram-button svg {
+  margin-right: 10px;
+}
+
+.instagram-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left-section {
+    margin-right: 0;
+    text-align: center;
+  }
+  .right-section {
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  input[type="number"],
+  button {
+    width: 100%;
+  }
+
+  .decorative-line {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .left-section h2 {
+    font-size: 1.8em;
+  }
+
+  .left-section p {
+    font-size: 1em;
+  }
+}
